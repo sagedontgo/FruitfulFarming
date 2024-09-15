@@ -1,0 +1,12 @@
+[
+	{
+		"function": "minecraft:set_damage",
+		"damage": {
+			"type": "minecraft:score",
+			"target": "this",
+			"score": "ff.waterLevel",
+			"scale": 1
+		},
+		"add": true
+	}
+]

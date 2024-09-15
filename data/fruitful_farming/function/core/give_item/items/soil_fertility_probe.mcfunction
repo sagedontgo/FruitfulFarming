@@ -1,0 +1,1 @@
+give @s iron_hoe[custom_name='{"italic":false,"text":"Soil Fertility Probe"}',custom_data={fruitfarm:{item:"soil_fertility_probe"}},food={nutrition:1,saturation:1,can_always_eat:true,eat_seconds: 2147483647}] 1

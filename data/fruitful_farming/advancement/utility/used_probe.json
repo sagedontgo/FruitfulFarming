@@ -1,0 +1,18 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:using_item",
+			"conditions": {
+				"item": {
+					"items": "minecraft:iron_hoe",
+					"components": {
+						"minecraft:custom_data": "{fruitfarm:{item:\"soil_fertility_probe\"}}"
+					}
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "fruitful_farming:gameplay/items/soil_fertility_probe/start"
+	}
+}

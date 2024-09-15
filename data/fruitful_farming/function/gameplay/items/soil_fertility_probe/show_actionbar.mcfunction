@@ -1,0 +1,3 @@
+particle block{block_state:"dirt"}
+title @s actionbar [{"text":"Fertilization Level: ","color": "gold"},{"score":{"name":"@e[sort=nearest,limit=1,type=item_display,tag=ff.plantPlaced]","objective": "ff.fertilizationLevel"},"color": "yellow"},{"text":"    "},{"text":"Age: ","color": "gold"},{"score":{"name":"@e[sort=nearest,limit=1,type=item_display,tag=ff.plantPlaced]","objective": "ff.age"},"color": "yellow"},{"text":"    "},{"text":"Grows in: ","color": "gold"},{"score":{"name":"@e[sort=nearest,limit=1,type=item_display,tag=ff.plantPlaced]","objective": "ff.growthTimer"},"color": "yellow","extra": [{"text":" ticks"}]}]
+title @s times 20t 20t 20t
