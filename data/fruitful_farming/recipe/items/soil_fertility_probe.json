@@ -1,0 +1,36 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "equipment",
+	"pattern": [
+		" SH",
+		" TS",
+		"I  "
+	],
+	"key": {
+		"I": {
+			"item": "minecraft:iron_ingot"
+		},
+		"S": {
+			"item": "minecraft:string"
+		},
+		"H": {
+			"item": "minecraft:iron_hoe"
+		},
+		"T": {
+			"item": "minecraft:stick"
+		}
+	},
+	"result": {
+		"id": "minecraft:iron_hoe",
+		"components": {
+			"minecraft:custom_data": "{fruitfarm:{item:\"soil_fertility_probe\"}}",
+			"minecraft:custom_name": "{\"text\":\"Soil Fertility Probe\",\"color\": \"white\",\"italic\": false}",
+			"minecraft:food": {
+				"nutrition": 1,
+				"saturation": 1,
+				"can_always_eat": true,
+				"eat_seconds": 2147483647
+			}
+		}
+	}
+}

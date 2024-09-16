@@ -28,7 +28,6 @@ execute as @e[type=item_display,tag=ff.plantPlaced,tag=!ff.plantGrown] at @s if 
 
 ## Crops
 # Cauliflower 
-
 execute as @e[type=item_display,tag=ff.cropMarker.cauliflower,tag=!ff.plantPlaced] at @s if block ~ ~ ~ farmland run function fruitful_farming:gameplay/crops/vegetables/cauliflower/planted
 execute as @e[type=item_display,tag=ff.cropMarker.cauliflower,tag=!ff.plantPlaced] at @s unless block ~ ~ ~ farmland run function fruitful_farming:gameplay/crops/vegetables/cauliflower/cant_plant
 
@@ -43,6 +42,6 @@ execute as @e[type=item_display,tag=ff.cropMarker.cauliflower,tag=ff.plantPlaced
 execute as @e[type=item_display,tag=ff.cropMarker.cauliflower,tag=ff.plantPlaced,tag=ff.notFertile] if score @s ff.fertilizationLevel matches 30.. at @s run function fruitful_farming:gameplay/crops/vegetables/cauliflower/growing/fertilizer/fertile
 execute as @e[type=item_display,tag=ff.indicator.notFertile] at @s unless entity @e[sort=nearest,limit=1,type=item_display,tag=ff.plantPlaced,tag=ff.notFertile] run kill @s
 
-
 execute as @e[type=item_display,tag=ff.cropMarker.cauliflower,tag=ff.plantPlaced,tag=!ff.notWatered,tag=!ff.notFertile,tag=!ff.plantGrown] as @s if score @s ff.growthTimer matches 1.. run function fruitful_farming:gameplay/crops/vegetables/cauliflower/growing/timer/timer
 execute as @e[type=item_display,tag=ff.cropMarker.cauliflower,tag=ff.plantPlaced,tag=!ff.notWatered,tag=!ff.notFertile,tag=!ff.plantGrown] as @s if score @s ff.growthTimer matches ..1 run function fruitful_farming:gameplay/crops/vegetables/cauliflower/growing/timer/age
+
