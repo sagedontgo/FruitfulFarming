@@ -1,4 +1,3 @@
 scoreboard players add @e[sort=nearest,distance=..3,type=item_display,tag=ff.plantPlaced] ff.hydrationLevel 1
-execute as @e[sort=nearest,distance=..3,type=item_display,tag=ff.plantPlaced] run tag @s remove ff.notWatered
-execute as @e[sort=nearest,distance=..3,type=item_display,tag=ff.plantPlaced] at @s run setblock ~ ~-1 ~ farmland[moisture=7]
-particle rain ~ ~ ~ 1 0 1 0 10 normal
+playsound weather.rain.above block @a[distance=..3] ~ ~ ~ 0.5 2
+particle rain ~ ~ ~ 0.9 0 0.9 0 25 normal

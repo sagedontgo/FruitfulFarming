@@ -11,7 +11,7 @@ execute if block ~ ~ ~ farmland[moisture=4] run setblock ~ ~ ~ farmland[moisture
 execute if block ~ ~ ~ farmland[moisture=5] run setblock ~ ~ ~ farmland[moisture=7]
 execute if block ~ ~ ~ farmland[moisture=6] run setblock ~ ~ ~ farmland[moisture=7]
 
-scoreboard players add @e[sort=nearest,limit=1,type=item_display,tag=ff.notWatered,distance=..1] ff.hydrationLevel 30
+scoreboard players add @e[sort=nearest,limit=1,type=item_display,distance=..1] ff.hydrationLevel 10
 kill @e[sort=nearest,distance=..0.5,limit=1,type=item_display,tag=ff.indicator.thirsty]
 
 execute if block ~ ~-1 ~ dirt run setblock ~ ~-1 ~ mud

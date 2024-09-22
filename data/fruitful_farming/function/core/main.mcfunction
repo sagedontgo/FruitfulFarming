@@ -36,8 +36,8 @@ execute as @a[tag=ff.inAdventureMode,nbt=!{SelectedItem:{id:"minecraft:player_he
 execute as @e[type=item_display,tag=ff.plantPlaced,tag=!ff.plantGrown] at @s if block ~ ~1 ~ beetroots[age=1] run setblock ~ ~1 ~ beetroots[age=0]
 
 ## Stop scoreboard overflow 
-execute as @e[type=item_display,tag=ff.plantPlaced] if score @s ff.rareDropBooster matches 51.. run scoreboard players set @s ff.rareDropBooster 50
-execute as @e[type=item_display,tag=ff.plantPlaced] if score @s ff.hydrationLevel matches 101.. run scoreboard players set @s ff.hydrationLevel 100
+execute as @e[type=item_display,tag=ff.plantPlaced] if score @s ff.rareDropBooster matches 50.. run scoreboard players set @s ff.rareDropBooster 50
+execute as @e[type=item_display,tag=ff.plantPlaced] if score @s ff.hydrationLevel matches 100.. run scoreboard players set @s ff.hydrationLevel 100
 
 ## Agritable
 execute as @e[type=item_display,tag=ff.agritable,tag=ff.placing] at @s run function fruitful_farming:gameplay/blocks/agritable/place
@@ -58,6 +58,7 @@ execute as @e[type=item_display,tag=ff.basicSprinkler,tag=ff.placing] at @s if e
 
 execute as @e[type=item_display,tag=ff.basicSprinkler,tag=ff.placed] at @s run tp @s ~ ~ ~ ~10 ~
 execute as @e[type=interaction,tag=ff.interactionEntity.sprinkler.basic] at @s on target run function fruitful_farming:gameplay/blocks/sprinkler/basic/pick_up
+
 execute as @e[type=interaction,tag=ff.interactionEntity.sprinkler.basic] at @s if score $ff.time ff.dayticks matches 0..100 run function fruitful_farming:gameplay/blocks/sprinkler/basic/water
 
 ## Crops
@@ -69,10 +70,9 @@ execute as @e[type=item_display,tag=ff.cropMarker.cauliflower,tag=ff.plantPlaced
 execute as @e[type=item_display,tag=ff.cropMarker.cauliflower,tag=ff.plantPlaced,tag=ff.cropAge.4] at @s run function fruitful_farming:gameplay/crops/vegetables/cauliflower/ages/dry_soil
 execute as @e[type=item_display,tag=ff.cropMarker.cauliflower,tag=ff.plantPlaced] at @s unless block ~ ~1 ~ beetroots run function fruitful_farming:gameplay/crops/general/destroy
 
-execute as @e[type=item_display,tag=ff.cropMarker.cauliflower,tag=ff.plantPlaced,tag=ff.notWatered] if score @s ff.hydrationLevel matches 50.. run function fruitful_farming:gameplay/crops/vegetables/cauliflower/growing/water/watered
-execute as @e[type=item_display,tag=ff.cropMarker.cauliflower,tag=ff.plantPlaced,tag=!ff.notWatered] if score @s ff.hydrationLevel matches ..49 run function fruitful_farming:gameplay/crops/vegetables/cauliflower/ages/dry_soil
-execute as @e[type=item_display,tag=ff.cropMarker.cauliflower,tag=ff.plantPlaced,tag=ff.notWatered] at @s run function fruitful_farming:gameplay/crops/vegetables/cauliflower/growing/water/not_watered
-execute as @e[type=item_display,tag=ff.cropMarker.cauliflower,tag=ff.plantPlaced,tag=!ff.notWatered] at @s if block ~ ~ ~ farmland[moisture=0] if score @e[type=item_display,tag=ff.cropMarker.cauliflower,tag=ff.plantPlaced,tag=!ff.notWatered,limit=1] ff.waterLevel matches 50.. run function fruitful_farming:gameplay/crops/vegetables/cauliflower/growing/water/watered
+execute as @e[type=item_display,tag=ff.cropMarker.cauliflower,tag=ff.plantPlaced,tag=ff.notWatered] if score @s ff.hydrationLevel matches 50.. at @s run function fruitful_farming:gameplay/crops/vegetables/cauliflower/growing/water/watered
+execute as @e[type=item_display,tag=ff.cropMarker.cauliflower,tag=ff.plantPlaced,tag=!ff.notWatered] if score @s ff.hydrationLevel matches ..49 at @s run function fruitful_farming:gameplay/crops/vegetables/cauliflower/growing/water/not_watered
+
 execute as @e[type=item_display,tag=ff.cropMarker.cauliflower,tag=ff.plantPlaced,tag=ff.notFertile] if score @s ff.fertilizationLevel matches ..30 at @s run function fruitful_farming:gameplay/crops/vegetables/cauliflower/growing/fertilizer/not_fertile
 execute as @e[type=item_display,tag=ff.cropMarker.cauliflower,tag=ff.plantPlaced,tag=!ff.notFertile] if score @s ff.fertilizationLevel matches ..30 at @s run function fruitful_farming:gameplay/crops/vegetables/cauliflower/growing/fertilizer/not_fertile
 execute as @e[type=item_display,tag=ff.cropMarker.cauliflower,tag=ff.plantPlaced,tag=ff.notFertile] if score @s ff.fertilizationLevel matches 30.. at @s run function fruitful_farming:gameplay/crops/vegetables/cauliflower/growing/fertilizer/fertile
@@ -80,4 +80,3 @@ execute as @e[type=item_display,tag=ff.indicator.notFertile] at @s unless entity
 
 execute as @e[type=item_display,tag=ff.cropMarker.cauliflower,tag=ff.plantPlaced,tag=!ff.notWatered,tag=!ff.notFertile,tag=!ff.plantGrown] as @s if score @s ff.growthTimer matches 1.. run function fruitful_farming:gameplay/crops/vegetables/cauliflower/growing/timer/timer
 execute as @e[type=item_display,tag=ff.cropMarker.cauliflower,tag=ff.plantPlaced,tag=!ff.notWatered,tag=!ff.notFertile,tag=!ff.plantGrown] as @s if score @s ff.growthTimer matches ..1 run function fruitful_farming:gameplay/crops/vegetables/cauliflower/growing/timer/age
-
