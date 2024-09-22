@@ -1,0 +1,1 @@
+$scoreboard players add $ff.total ff.sellValue $(value)

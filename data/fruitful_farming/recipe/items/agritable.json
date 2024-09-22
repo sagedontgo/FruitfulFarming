@@ -1,0 +1,40 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"SHS",
+		"SCS",
+		"SSS"
+	],
+	"key": {
+		"S": {
+			"tag": "fruitful_farming:vanilla_seeds"
+		},
+		"C": {
+			"item": "minecraft:crafting_table"
+		},
+		"H": {
+			"tag": "fruitful_farming:hoes"
+		}
+	},
+	"result": {
+		"id": "minecraft:bat_spawn_egg",
+        "components": {
+            "minecraft:entity_data": {
+				"id": "minecraft:item_display",
+                "item":{"id":"minecraft:player_head"},
+                "brightness": {"sky": 10, "block": 10},
+                "transformation": {
+                    "left_rotation": [0.0,0.0,0.0,1.0],
+                    "right_rotation": [0.0,0.0,0.0,1.0],
+                    "translation": [0.0,1.01,0.0],
+                    "scale": [2.02,2.02,2.02]
+                },
+                "Rotation": [0.0,0.0],
+                "Tags": ["ff.agritable","ff.placing"]
+
+                
+            }
+        }
+        
+	}
+}

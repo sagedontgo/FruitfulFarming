@@ -1,0 +1,36 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:player_head",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": "{fruitfarm:{crop:\"cauliflower\",isHead:1b,rarity:shiny,sellable:1b,value:15}}",
+								"minecraft:profile": {
+									"id": [
+										0,
+										0,
+										0,
+										0
+									],
+									"properties": [
+										{
+											"name": "textures",
+											"value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTRhNmRlZGQ5OWJiOWFmM2YxYjJmMzM4ZDUwOWE5MjY2MDZjZGRmZGMzNTFlMDE4YWFkMWMwNzAxNWFkNTY2ZCJ9fX0="
+										}
+									]
+								},
+								"minecraft:custom_name": "{\"italic\":false,\"text\":\"🌟 Cauliflower\",\"color\":\"aqua\"}"
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,54 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"PSP",
+		"STS",
+		"PSP"
+	],
+	"key": {
+		"S": {
+			"item": "minecraft:stick"
+		},
+		"P": {
+			"tag": "minecraft:planks"
+		},
+		"T": {
+			"item": "minecraft:string"
+		}
+	},
+	"result": {
+		"id": "minecraft:bat_spawn_egg",
+        "components": {
+            "minecraft:entity_data": {
+				"id": "minecraft:item_display",
+                "item":{
+					"id":"minecraft:player_head",
+					"components": {
+						"profile": {
+							"id": [821724136,-1097380748,-1474420925,28903518],
+							"properties": [
+								{
+									"name": "textures",
+									"value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmQ3NjFjYzE2NTYyYzg4ZDJmYmU0MGFkMzg1MDJiYzNiNGE4Nzg1OTg4N2RiYzM1ZjI3MmUzMGQ4MDcwZWVlYyJ9fX0="
+								}
+							]
+						}
+					}
+				},
+                "brightness": {"sky": 10, "block": 10},
+                "transformation": {
+                    "left_rotation": [0.0,0.0,0.0,1.0],
+                    "right_rotation": [0.0,0.0,0.0,1.0],
+                    "translation": [0.0,1.1,0.0],
+                    "scale": [2.02,2.02,2.02]
+                },
+                "Rotation": [0.0,0.0],
+                "Tags": ["ff.harvest_box","ff.placing"]
+
+                
+            },
+			"minecraft:custom_name": "{\"text\":\"Harvest Box\",\"italic\": false}"
+        }
+        
+	}
+}
